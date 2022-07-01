@@ -1,0 +1,8 @@
+# Implementation-of-CNN-for-epileptic-seizure-detection
+Final Year Project
+In this project, the convolutional neural network is used to extract the significant spatial features from EEG signals and classification task is performed  on the extracted features to detect the onset of a seizure. The network is trained and tested using MATLAB. An accuracy of 95.09% is achieved. As CNN involves an enormous number of computations, it is necessary to accelerate the CNN computation by a hardware accelerator, such as an 
+Field Programmable Gate Array (FPGA) design. An FPGA based CNN accelerator is employed and a 30-30-10-10 neural network is devised as a feedforward fully connected neural network so as to reduce the computational complexity. Simulation is performed in Verilog using Xilinx Vivado achieving an accuracy of 96.6667%. 
+
+The workflow is formulated as: EEG data acquisition from open-source database, pre processing of raw EEG signal by filtering, discrete wavelet transform and generating the spectrograms, train, validate and test the pre-trained networks and compare their accuracies, and finally implement an efficient hardware model for the same.
+
+The raw EEG signal obtained from the Bonn dataset is subjected to pre-processing - involving the FIR Bandpass Filter and the Discrete Wavelet Transform. The spectrograms thus generated are fed into the pre-trained CNN models, namely AlexNet, GoogleNet, ResNet-18, ResNet-50, VGG-16 and VGG-19 for classification. The hardware implementation is based on a replica of a feedforward fully connected network - a 30-30-10-10 network which performs the same functionality as that of the fully connected layers in AlexNet.
